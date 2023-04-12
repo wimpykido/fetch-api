@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        text-align: center
+    }
+    input {
+        margin-bottom: 50px;
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+    button {
+        background-color: black;
+        border-radius: 1px solid black;
+        color: white;
+        padding: 5px 30px;
+        border-radius: 4px;
+        font-size: 20px;
+    }
+    button:hover {
+        background-color: white;
+        color: black;
+    }
+    .output {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .output * {
+        display: inherit;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .output div {
+        background-color: black;
+        color: white;
+        width: 15%;
+        min-width: 180px;
+        text-align: justify;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: -2px 5px 5px 0px rgba(0,0,0,0.75);
+    }
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 15px;
+    }
+    .output .error {
+        background-color: white;
+        color: red;
+        font-weight: 700;
+        font-size: 40px;
+        width: 100%;
+        text-align: center;
+    }
+</style>
+<body>
+    <input type="number" id="id" name="inputNum" >
+    <button id="btn">submit</button>
+    <div class="output">
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
