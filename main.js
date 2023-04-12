@@ -1,12 +1,12 @@
-const button = document.getElementById("btn")
+const button = document.querySelector("#btn")
 const output = document.querySelector(".output")
 const input = document.querySelector("#id");
 
 const getPosts = async () => {
     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-    data = await response.json();
-    return data;
+    return await response.json();
 }
+
 const filterPosts = async () => {
   const num = document.getElementById("id").value.trim();
   try {       
@@ -29,7 +29,6 @@ function showOnScreen (data) {
 
   data.forEach(({ title, userId, body }) => {
     const container = document.createElement("div");
-
     const head = document.createElement("h1");
     head.textContent = title;
 
@@ -42,6 +41,7 @@ function showOnScreen (data) {
     container.append(head, userIdElement, paragraph);
     output.appendChild(container);
   });
+
   if (data.length === 0) {
     const error = document.createElement("div");
 
@@ -51,8 +51,10 @@ function showOnScreen (data) {
     output.appendChild(error);
   }
 }
-filterPosts();
+
+window.addEventListener("load", filterPosts)
 button.addEventListener("click", filterPosts);
+
 input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
       event.preventDefault();
