@@ -35,7 +35,7 @@
         flex-wrap: wrap;
         gap: 30px;
     }
-    .output * {
+    .output div {
         display: inherit;
         flex-direction: column;
         justify-content: space-between;
@@ -65,10 +65,26 @@
         text-align: center;
         box-shadow: none;
     }
+    .highlight {
+        color: red;
+        display: inline-block;
+    }
+    .nav {
+        display: flex;
+        justify-content: space-evenly;
+    }
 </style>
 <body>
-    <input type="number" id="id" name="inputNum" >
-    <button id="btn">submit</button>
+    <div class="nav">
+        <div>
+            <input type="number" id="id" name="inputNum" >
+            <button id="btn">submit</button>  
+        </div>
+        <div>
+            <input type="text" id="text" name="InputText" >
+            <button id="btn2">search</button>
+        </div>
+    </div>
     <div class="output"></div>
     <script src="main.js"></script>
 </body>
